@@ -1,9 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <web-app
     xmlns="http://java.sun.com/xml/ns/javaee"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-    version="3.0">
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+
+    <!--<context-param>
+        <param-name>portalListenerClasses</param-name>
+        <param-value>com.liferay.portal.kernel.servlet.SerializableSessionAttributeListener,org.springframework.boot.legacy.context.web.SpringBootContextLoaderListenerr</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.springframework.boot.legacy.context.web.SpringBootContextLoaderListener</listener-class>
+    </listener>-->
 
     <mime-mapping>
         <extension>html</extension>

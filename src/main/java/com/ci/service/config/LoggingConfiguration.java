@@ -19,8 +19,8 @@ import static io.github.jhipster.config.logging.LoggingUtils.*;
 @Configuration
 public class LoggingConfiguration {
 
-    public LoggingConfiguration(@Value("${spring.application.name}") String appName,
-                                @Value("${server.port}") String serverPort,
+    public LoggingConfiguration(@Value("communityinvestment") String appName,
+                                @Value("8085") String serverPort,
                                 JHipsterProperties jHipsterProperties,
                                 ObjectMapper mapper) throws JsonProcessingException {
 

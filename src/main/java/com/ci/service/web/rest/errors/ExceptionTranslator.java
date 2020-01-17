@@ -1,5 +1,6 @@
 package com.ci.service.web.rest.errors;
 
+import com.liferay.portal.kernel.portlet.PortletBagPool;
 import io.github.jhipster.web.util.HeaderUtil;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -36,7 +37,7 @@ public class ExceptionTranslator implements ProblemHandling, SecurityAdviceTrait
     private static final String PATH_KEY = "path";
     private static final String VIOLATIONS_KEY = "violations";
 
-    @Value("${jhipster.clientApp.name}")
+    @Value("communityinvestmentApp")
     private String applicationName;
 
     /**

@@ -50,7 +50,7 @@ management:
       percentiles:
         all: 0, 0.5, 0.75, 0.95, 0.99, 1.0
     tags:
-      application: ${spring.application.name}
+      application: communityinvestment
     web:
       server:
         auto-time-requests: true
@@ -101,6 +101,9 @@ server:
     session:
       cookie:
         http-only: true
+    context_parameter:
+      p-name: portalListenerClasses
+      p-value: -com.liferay.portal.kernel.servlet.SerializableSessionAttributeListener,org.springframework.web.context.ContextLoaderListener
 
 # Properties to be exposed on the /info management endpoint
 info:

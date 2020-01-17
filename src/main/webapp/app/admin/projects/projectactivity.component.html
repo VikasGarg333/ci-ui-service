@@ -210,7 +210,7 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="text" class="form-control bdr-left-green" ngbDatepicker #d="ngbDatepicker" [value]="formatter.format(fromDate)" (click)="d.toggle()" readonly />
+                            <input type="text" class="form-control bdr-left-green" ngbDatepicker #d="ngbDatepicker" [value]="fromDate" (click)="d.toggle()" readonly />
                             <div class="input-group-append">
                                 <button class="btn" (click)="d.toggle()" type="button" style="border: 1px solid #ced4da;">
                                     <fa-icon icon="calendar-alt"></fa-icon>
@@ -240,7 +240,7 @@
             <div class="col-sm-6">
                 <div class="form-group">
                     <div class="input-group">
-                        <input type="text" class="form-control bdr-left-green" ngbDatepicker #d2="ngbDatepicker" [value]="formatter.format(fromDate)" (click)="d2.toggle()" readonly />
+                        <input type="text" class="form-control bdr-left-green" ngbDatepicker #d2="ngbDatepicker" [value]="fromDate" (click)="d2.toggle()" readonly />
                         <div class="input-group-append">
                             <button class="btn" (click)="d2.toggle()" type="button" style="border: 1px solid #ced4da;">
                                 <fa-icon icon="calendar-alt"></fa-icon>

@@ -50,14 +50,14 @@ public class TokenProvider implements InitializingBean {
             keyBytes = secret.getBytes(StandardCharsets.UTF_8);
         } else {
             log.debug("Using a Base64-encoded JWT secret key");
-            keyBytes = Decoders.BASE64.decode(jHipsterProperties.getSecurity().getAuthentication().getJwt().getBase64Secret());
+            //keyBytes = Decoders.BASE64.decode(jHipsterProperties.getSecurity().getAuthentication().getJwt().getBase64Secret());
+            keyBytes = Decoders.BASE64.decode("NDNiMThlYmVmNmFiOGE5OGE0ZDY2ODZiZjJlMDA0N2IzNTYyMTE4NmYzMjEyZThlZTUxZGEwODRjMmRmNzQ3M2QyZjVmNDZjZWVhNzA1ZGU2MGQzYTczMjJiNDExMzlmMTk4NzYzYjU3NTAzMjBlYWEyYzllZTFmYTg1OTg5Nzk=");
         }
         this.key = Keys.hmacShaKeyFor(keyBytes);
         this.tokenValidityInMilliseconds =
-            1000 * jHipsterProperties.getSecurity().getAuthentication().getJwt().getTokenValidityInSeconds();
+            1000 * 86400;
         this.tokenValidityInMillisecondsForRememberMe =
-            1000 * jHipsterProperties.getSecurity().getAuthentication().getJwt()
-                .getTokenValidityInSecondsForRememberMe();
+            1000 * 2592000;
     }
 
     public String createToken(Authentication authentication, boolean rememberMe) {
